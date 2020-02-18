@@ -7,6 +7,8 @@ use Przeslijmi\XlsxPeasant\Reader;
 $xlsx = new Reader('examples/ReaderTest.xlsx');
 $book = $xlsx->readIn()->getBook();
 
-var_dump($book->getSheets());
+foreach ($book->getSheets() as $sheet) {
+    var_dump($sheet->getName());
+}
 
 echo '1';
