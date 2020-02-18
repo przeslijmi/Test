@@ -405,8 +405,6 @@ class XlTable extends XmlFile
         // Try to find which worksheet has this Table.
         foreach ($this->getReader()->getXlWorksheets() as $xlWorksheet) {
 
-            var_dump('test xlWorksheet if uses "' . $this->getNumber() . '"');
-
             if ($xlWorksheet->doYouUseTable($this->getNumber()) === true) {
 
                 // Save.

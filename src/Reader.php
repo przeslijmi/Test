@@ -259,8 +259,6 @@ class Reader
         $extract = @$zip->extractTo($this->unzipUri);
         $close   = @$zip->close();
 
-        var_dump($this->unzipUri);
-
         // Throw if needed.
         if (empty(min($open, $extract, $close)) === true) {
             throw (new MethodFopException('openExtractOrClosingZipArchiveFailed'))
@@ -303,7 +301,6 @@ class Reader
         // Read in Tables.
         $pattern = '/(xl)(\\\\|\\/)(tables)(\\\\|\\/)(table)(\\d)+(.xml)$/';
         foreach (preg_grep($pattern, $this->allFiles) as $fileUri) {
-            var_dump($fileUri);
             $this->addXlTable($fileUri);
         }
 
