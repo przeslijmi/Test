@@ -296,16 +296,14 @@ class Reader
 
         // Read in Sheets.
         $pattern = '/(xl)(\\\\|\\/)(worksheets)(\\\\|\\/)(sheet)(\\d)+(.xml)$/';
-        var_dump($this->allFiles);
-        var_dump($pattern);
         foreach (preg_grep($pattern, $this->allFiles) as $fileUri) {
-            var_dump($fileUri);
             $this->addXlWorksheet($fileUri);
         }
 
         // Read in Tables.
         $pattern = '/(xl)(\\\\|\\/)(tables)(\\\\|\\/)(table)(\\d)+(.xml)$/';
         foreach (preg_grep($pattern, $this->allFiles) as $fileUri) {
+            var_dump($fileUri);
             $this->addXlTable($fileUri);
         }
 
