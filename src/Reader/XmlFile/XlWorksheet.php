@@ -121,6 +121,7 @@ class XlWorksheet extends XmlFile
 
         // If this sheet has no table at all - it will not have any rels.
         if ($this->rels === null) {
+            var_dump('NO TABLES AT ALL');
             return false;
         }
 
@@ -128,6 +129,7 @@ class XlWorksheet extends XmlFile
         $searchFor = '../tables/table' . $tableNumber . '.xml';
 
         // Scan and return true if found.
+        var_dump('SEARCH FOR ' . $searchFor);
         foreach ($this->rels->getElementsByTagName('Relationship') as $relNode) {
             if ($relNode->getAttribute('Target') === $searchFor) {
                 return true;
@@ -346,11 +348,12 @@ class XlWorksheet extends XmlFile
 
         // Lvd.
         $namePart    = 'sheet' . $this->number . '.xml';
-        $xmlFileUri  = str_replace('/', '\\', $this->getFileUri());
-        $relsFileUri = str_replace($namePart, '_rels\\' . $namePart . '.rels', $xmlFileUri);
+        $xmlFileUri  = str_replace('\\', '/', $this->getFileUri());
+        $relsFileUri = str_replace($namePart, '_rels/' . $namePart . '.rels', $xmlFileUri);
 
         // If it exists add rels file to this sheet.
         if (file_exists($relsFileUri) === true) {
+            var_dump('RELS FILE NO EXISTS');
             $this->addRels($relsFileUri);
         }
 
