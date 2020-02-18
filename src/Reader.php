@@ -413,19 +413,23 @@ class Reader
     private function getFilesRecursively(?string $dir = null) : array
     {
 
+        // Lvd.
+        $sep     = '/';
+        $results = [];
+
         // If no dir given take from instance.
         if (is_null($dir) === true) {
             $dir = $this->unzipUri;
         }
 
+        // Cut off last sep.
+        $dir = str_replace('\\', '/', $dir);
+        $dir = rtrim($dir, '/');
+
         // If no files are present - empty main dir after unpacking.
         if ($dir === $this->unzipUri && count(scandir($dir)) <= 2) {
             throw new DirIsEmptyException('tempDirWithUnpackedXlsx', $dir);
         }
-
-        // Lvd.
-        $sep     = '\\';
-        $results = [];
 
         // Scan directory to find for filex.
         foreach (scandir($dir) as $name) {
