@@ -115,10 +115,7 @@ class Reader
 
             // Save.
             $this->xlsxFileUri = $xlsxFileUri;
-            $this->unzipUri    = ''
-                . rtrim(sys_get_temp_dir(), '/\\/')
-                . '/_stolem_xlsxReader/'
-                . rand(10000, 99999);
+            $this->unzipUri    = 'examples/.temp/unpack_' . rand(10000, 99999);
 
         } catch (Throwable $thr) {
             throw new ClassFopException('creatingXlsxReader', $thr);
