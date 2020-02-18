@@ -1,0 +1,137 @@
+[
+    {
+        "name": "fleshgrinder/uuid",
+        "version": "dev-php-7.1",
+        "version_normalized": "dev-php-7.1",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Fleshgrinder/php-uuid.git",
+            "reference": "2782f7ae8e82c8958f799f56d27a9d03ab4fd378"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Fleshgrinder/php-uuid/zipball/2782f7ae8e82c8958f799f56d27a9d03ab4fd378",
+            "reference": "2782f7ae8e82c8958f799f56d27a9d03ab4fd378",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.1"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^6.0"
+        },
+        "time": "2017-07-01T18:23:53+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "classmap": [
+                "src"
+            ]
+        },
+        "autoload-dev": {
+            "classmap": [
+                "src",
+                "tests"
+            ]
+        },
+        "license": [
+            "Unlicense"
+        ],
+        "authors": [
+            {
+                "name": "Richard Fussenegger",
+                "email": "fleshgrinder@users.noreply.github.com"
+            }
+        ],
+        "description": "UUID value object for PHP",
+        "support": {
+            "source": "https://github.com/Fleshgrinder/php-uuid/tree/php-7.1",
+            "issues": "https://github.com/Fleshgrinder/php-uuid/issues"
+        }
+    },
+    {
+        "name": "przeslijmi/sexceptions",
+        "version": "v1.5.0",
+        "version_normalized": "1.5.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/przeslijmi/Sexceptions.git",
+            "reference": "02fae8cf649b31a63f5868101728aa461477bf40"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/przeslijmi/Sexceptions/zipball/02fae8cf649b31a63f5868101728aa461477bf40",
+            "reference": "02fae8cf649b31a63f5868101728aa461477bf40",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.3",
+            "przeslijmi/sexceptions": "~1.0"
+        },
+        "time": "2019-12-23T10:45:39+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Przeslijmi\\Sexceptions\\": "src/"
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Karol Nowakowski",
+                "email": "przeslijmi@gmail.com"
+            }
+        ],
+        "description": "PHP library for Exceptions serving.",
+        "support": {
+            "source": "https://github.com/przeslijmi/Sexceptions/tree/v1.5.0",
+            "issues": "https://github.com/przeslijmi/Sexceptions/issues"
+        }
+    },
+    {
+        "name": "przeslijmi/sivalidator",
+        "version": "v2.2.1",
+        "version_normalized": "2.2.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/przeslijmi/Sivalidator.git",
+            "reference": "fb0c6a432fb755ff00107d007a43908296571c29"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/przeslijmi/Sivalidator/zipball/fb0c6a432fb755ff00107d007a43908296571c29",
+            "reference": "fb0c6a432fb755ff00107d007a43908296571c29",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.3",
+            "przeslijmi/sexceptions": "~1.0"
+        },
+        "time": "2019-11-10T20:39:23+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Przeslijmi\\Sivalidator\\": "src/",
+                "Przeslijmi\\Sexceptions\\": "../../przeslijmi/sexceptions/src/"
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Karol Nowakowski",
+                "email": "przeslijmi@gmail.com"
+            }
+        ],
+        "description": "PHP library for validation of data types.",
+        "support": {
+            "source": "https://github.com/przeslijmi/Sivalidator/tree/v2.2.1",
+            "issues": "https://github.com/przeslijmi/Sivalidator/issues"
+        }
+    }
+]
